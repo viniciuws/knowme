@@ -1,14 +1,18 @@
 <template>
-  <div class="about">
+  <div class="hello">
+    <AppHeader></AppHeader>
     <p>
-      ABOUT
+      HOME
     </p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'About',
+  name: 'Home',
+  props: {
+    msg: String,
+  },
 };
 </script>
 
