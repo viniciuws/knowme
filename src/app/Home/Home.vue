@@ -1,13 +1,11 @@
 <template>
-  <div class="hello">
-    <AppHeader></AppHeader>
-    <p>
-      HOME
-    </p>
+  <div class="home">
+    HOME
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'Home',
   props: {
@@ -17,4 +15,9 @@ export default {
 </script>
 
 <style scoped lang="sass">
+@import '../../styles/global.sass'
+.home
+  display: flex
+  justify-content: center
+  padding: 10px
 </style>
