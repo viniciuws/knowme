@@ -75,5 +75,20 @@
       "**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)"
     ],
     "testURL": "http://localhost/"
-  }
+  },
+  "description": "## Project setup ``` npm install ```",
+  "main": "babel.config.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viniciuws/knowme.git"
+  },
+  "author": "Vinícius",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viniciuws/knowme/issues"
+  },
+  "homepage": "https://github.com/viniciuws/knowme#readme"
 }
