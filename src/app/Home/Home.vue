@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    HOME
   </div>
 </template>
 
@@ -15,9 +14,8 @@ export default {
 </script>
 
 <style scoped lang="sass">
-@import '../../styles/global.sass'
 .home
-  display: flex
-  justify-content: center
-  padding: 10px
+  background-image: url(https://cdn.dribbble.com/users/31752/screenshots/1528969/globe-dribbble-400x300_1_.gif)
+  background-repeat: no-repeat
+  background-size: 250px 170px;
 </style>

@@ -1,13 +1,17 @@
 <template>
   <div class="details">
-    DETAILS
+    <UserAvatar/>NOME
   </div>
 </template>
 
 <script>
+import UserAvatar from '../../components/UserAvatar.vue';
 
 export default {
   name: 'Details',
+  components: {
+    UserAvatar,
+  },
 };
 </script>
 

@@ -1,8 +1,8 @@
 <template>
   <div class="header">
-    <div class="header__menu">HOME</div>
-    <div class="header__menu">ABOUT</div>
-    <div class="header__menu">CONTACT</div>
+    <router-link to="/" class="header__menu">HOME</router-link>
+    <router-link to="/about" class="header__menu">ABOUT</router-link>
+    <router-link to="/contact" class="header__menu">CONTACT</router-link>
   </div>
 </template>
 
@@ -17,15 +17,17 @@ export default {
 .header
   display: flex
   flex-direction: row
-  padding: 0px
-  background-color: $tertiary-color
+  align-items: center
+  height: 40px
+  background-color: $primary-color
   &__menu
-    border: 
+    border:
     font-size: 16px
     font-weight: bold
     padding: 10px
+    text-decoration: none
+    color: $secondary-font-color
     &:hover
-      background-color: $primary-color
+      background-color: $tertiary-color
       cursor: pointer
-    
 </style>

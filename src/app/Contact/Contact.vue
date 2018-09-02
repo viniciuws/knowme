@@ -1,17 +1,18 @@
 <template>
-  <div class="about">
-    ABOUT
+  <div class="contact">
+    CONTACT
   </div>
 </template>
 
 <script>
+
 export default {
-  name: 'About',
+  name: 'Contact',
 };
 </script>
 
 <style scoped lang="sass">
-.about
+.contact
   display: flex
   justify-content: center
   padding: 10px

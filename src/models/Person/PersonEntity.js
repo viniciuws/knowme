@@ -5,5 +5,6 @@ class PersonEntity {
     this.summary = summary;
     this.profession = profession;
     this.genre = genre;
+    this.skills = new SkillsEntity();
   }
 }
