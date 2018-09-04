@@ -14,6 +14,6 @@ export default {
 .user-avatar
    width: 150px
    height: 150px
-   background-image: url('../assets/user.png') 
+   background-image: url('../assets/user.png')
    border-radius: 50%
 </style>

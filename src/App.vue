@@ -31,19 +31,20 @@ export default {
 <style scoped lang="sass">
 @import 'styles/global.sass';
 .app
-  display: grid
-  grid-template-columns: 100%
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   margin: -10px
-  +media-min-md()
-    grid-template-columns: 70% 30%
   &__page
-    display: grid
+    display: flex
+    flex-direction: column
     overflow: auto
-    border-right: solid 4px $secondary-color
+    width: 100%
+    +media-min-md()
+      width: 70%
   &__details
-    display: grid
-    height: 500px
-    align-items: center
-    justify-content: center
+    position: fixed
+    width: 30%
+    height: 100%
+    right: 0
+    top: 0
+    border-left: solid 2px $secondary-color
+    z-index: 1
 </style>

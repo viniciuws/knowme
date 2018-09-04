@@ -1,5 +1,9 @@
 <template>
   <div class="home">
+    <div class="home__header">
+      <img src="https://cdn.dribbble.com/users/31752/screenshots/1528969/globe-dribbble-400x300_1_.gif" alt="Smiley face" height="170" width="250">
+    </div>
+    <div class="home__title">SKILLS</div>
   </div>
 </template>
 
@@ -14,8 +18,20 @@ export default {
 </script>
 
 <style scoped lang="sass">
+@import '../../styles/global.sass'
 .home
-  background-image: url(https://cdn.dribbble.com/users/31752/screenshots/1528969/globe-dribbble-400x300_1_.gif)
-  background-repeat: no-repeat
-  background-size: 250px 170px;
+  display: flex
+  flex-direction: column
+  &__header
+    display: flex
+    justify-content: flex-end
+    width: 100%
+    border: solid 1px $secondary-color
+  &__title
+    display: flex
+    justify-content: center
+    width: 100%
+    color: $primary-color
+    font-size: 30px
+    font-weight: bold
 </style>
