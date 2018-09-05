@@ -4,17 +4,30 @@
       <a href="#menu" class="details__show">&#9776;</a>
     </div>
     <UserAvatar/>
+    {{ person }}
   </div>
 </template>
 
 <script>
 import UserAvatar from '../../components/UserAvatar.vue';
+import httpService from '../../models/Person/PersonService.js'
 
 export default {
   name: 'Details',
   components: {
     UserAvatar,
   },
+  data: function() {
+    return {
+      person: {}
+    }
+  },
+
+  created() {
+   this.person = httpService.find();
+   console.log(this.person);
+  }
+
 };
 </script>
 
@@ -23,8 +36,8 @@ export default {
 .details
   display: flex
   flex-direction: column
-  justify-content: center
   align-items: center
+  height: 100%
   &__action
     width: 100%
     padding: 10px

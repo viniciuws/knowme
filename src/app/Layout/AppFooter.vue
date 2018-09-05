@@ -14,6 +14,7 @@ export default {
 .footer
   display: flex
   justify-content: center
+  flex: 1
   font-weight: bold
   background-color: $primary-color
   color: $secondary-font-color

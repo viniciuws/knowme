@@ -22,6 +22,7 @@ export default {
 .home
   display: flex
   flex-direction: column
+  flex: 1
   &__header
     display: flex
     justify-content: flex-end

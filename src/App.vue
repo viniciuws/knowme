@@ -31,7 +31,10 @@ export default {
 <style scoped lang="sass">
 @import 'styles/global.sass';
 .app
-  margin: -10px
+  display: flex
+  flex-direction: row
+  margin: -8px
+  height: 100%
   &__page
     display: flex
     flex-direction: column
@@ -40,11 +43,7 @@ export default {
     +media-min-md()
       width: 70%
   &__details
-    position: fixed
     width: 30%
     height: 100%
-    right: 0
-    top: 0
     border-left: solid 2px $secondary-color
-    z-index: 1
 </style>

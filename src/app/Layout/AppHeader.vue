@@ -17,12 +17,8 @@ export default {
 .header
   display: flex
   flex-direction: row
-  align-items: center
-  height: 40px
   background-color: $primary-color
   &__menu
-    border:
-    font-size: 16px
     font-weight: bold
     padding: 10px
     text-decoration: none
