@@ -14,7 +14,8 @@ export default {
 .footer
   display: flex
   justify-content: center
-  flex: 1
+  flex-shrink: 1
+  height: 100px
   font-weight: bold
   background-color: $primary-color
   color: $secondary-font-color

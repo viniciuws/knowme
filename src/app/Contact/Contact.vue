@@ -14,6 +14,7 @@ export default {
 <style scoped lang="sass">
 .contact
   display: flex
+  flex: 1
   justify-content: center
   padding: 10px
 </style>

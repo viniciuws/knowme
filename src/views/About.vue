@@ -14,5 +14,6 @@ export default {
 .about
   display: flex
   justify-content: center
+  flex: 1
   padding: 10px
 </style>

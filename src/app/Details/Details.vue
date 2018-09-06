@@ -1,9 +1,6 @@
 <template>
   <div class="details">
-    <div class="details__action">
-      <a href="#menu" class="details__show">&#9776;</a>
-    </div>
-    <UserAvatar/>
+    <UserAvatar class="details__avatar"/>
     {{ person }}
   </div>
 </template>
@@ -38,15 +35,6 @@ export default {
   flex-direction: column
   align-items: center
   height: 100%
-  &__action
-    width: 100%
-    padding: 10px
-  &__show
-    left: 0
-    background: rgba(0, 0, 0, .4)
-    border-radius: 4px
-    padding: .4em .6em
-    text-decoration: none
-    &:hover
-      background-color: $secondary-color
+  &__avatar
+    margin-top: 20px
 </style>

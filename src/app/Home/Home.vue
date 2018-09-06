@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="home__header">
-      <img src="https://cdn.dribbble.com/users/31752/screenshots/1528969/globe-dribbble-400x300_1_.gif" alt="Smiley face" height="170" width="250">
+      <img src="https://cdn.dribbble.com/users/31752/screenshots/1528969/globe-dribbble-400x300_1_.gif" alt="World" height="180" width="250">
     </div>
     <div class="home__title">SKILLS</div>
   </div>
@@ -23,11 +23,11 @@ export default {
   display: flex
   flex-direction: column
   flex: 1
+  overflow: auto
   &__header
     display: flex
     justify-content: flex-end
     width: 100%
-    border: solid 1px $secondary-color
   &__title
     display: flex
     justify-content: center
