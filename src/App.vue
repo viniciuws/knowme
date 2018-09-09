@@ -33,8 +33,10 @@ export default {
 @import 'styles/global.sass';
 .app
   display: flex
-  flex-direction: row
-  height: 100%
+  flex-direction: column
+  +media-min-md()
+    height: 100%
+    flex-direction: row
   &__page
     display: flex
     flex-direction: column
@@ -43,9 +45,10 @@ export default {
       width: 70%
     &_main
       overflow: auto
-
   &__details
-    width: 30%
+    width: 100%
     height: 100%
     box-shadow: -1px 0px 10px rgba(0, 0, 0, 0.15);
+    +media-min-md()
+      width: 30%
 </style>
