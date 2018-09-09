@@ -1,29 +1,32 @@
 <template>
   <div class="details">
     <UserAvatar class="details__avatar"/>
-    {{ person }}
+    <router-link to="/about" class="details__name">{{ person.name }}</router-link>
+    <div class="details__profession">{{ person.profession }}</div>
+    <div class="details__summary">{{ person.summary }}</div>
   </div>
 </template>
 
 <script>
 import UserAvatar from '../../components/UserAvatar.vue';
-import httpService from '../../models/Person/PersonService.js'
+import PersonService from '../../models/Person/PersonService';
 
 export default {
   name: 'Details',
   components: {
     UserAvatar,
   },
-  data: function() {
+  data: function () {
     return {
-      person: {}
-    }
+      person: {},
+    };
   },
 
   created() {
-   this.person = httpService.find();
-   console.log(this.person);
-  }
+    PersonService.find().then(({ data }) => {
+      this.person = data;
+    });
+  },
 
 };
 </script>
@@ -37,4 +40,21 @@ export default {
   height: 100%
   &__avatar
     margin-top: 20px
+  &__name
+    padding: 30px
+    font-size: 22px
+    text-decoration: none
+    color: $primary-color-button
+    &:hover
+      cursor: pointer
+      font-weight: bold
+  &__profession
+    font-size: 30px
+    font-weight: bold
+    color: $secondary-font-color
+  &__summary
+    padding: 30px
+    font-size: 18px
+    text-align: center
+    color: $tertiary-font-color
 </style>

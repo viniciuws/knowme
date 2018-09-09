@@ -1,10 +1,8 @@
 import httpService from '../../services/HttpService';
 
-class PersonService {
+export default {
 
   find() {
-    return httpService.get('../../../static/person.json').then(({ data }) => data);
-  }
-}
-
-export default new PersonService()
+    return httpService.get('/static/person.json');
+  },
+};

@@ -1,22 +1,26 @@
 <template>
-  <div class="contact">
-     <div class="contact__header">
-      <div class="contact__header_title">
-        Contact
+  <div class="about">
+    <div class="about__header">
+      <div class="about__header_title">
+        About {{ person.name}}
       </div>
     </div>
-    <div class="contact__body">
-      Need help with your website?
-      <p>{{ person.email }}</p>
+    <div class="about__body">
+      <p>{{ person.fullSummary }}</p>
+      <div class="about__body_subtitle">
+        Experience
+      </div>
+        <p>{{ person.experience }}</p>
     </div>
   </div>
 </template>
 
 <script>
-import PersonService from '../../models/Person/PersonService';
+import PersonService from '../../models/Person/PersonService'
 
 export default {
-  name: 'Contact',
+  name: 'About',
+
   data: function () {
     return {
       person: {},
@@ -34,7 +38,7 @@ export default {
 <style scoped lang="sass">
 @import '../../styles/global.sass'
 
-.contact
+.about
   display: flex
   flex: 1
   padding: 10px

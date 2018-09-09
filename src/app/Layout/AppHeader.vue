@@ -7,8 +7,10 @@
 </template>
 
 <script>
+
 export default {
   name: 'AppHeader',
+  components: { },
 };
 </script>
 
@@ -24,6 +26,7 @@ export default {
     text-decoration: none
     color: $secondary-font-color
     &:hover
-      background-color: $tertiary-color
+      color: $primary-font-color
+      background-color: $secondary-color
       cursor: pointer
 </style>
