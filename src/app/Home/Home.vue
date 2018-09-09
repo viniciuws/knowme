@@ -64,8 +64,11 @@ export default {
     font-size: 36px
     font-weight: bold
   &__skills
-    display: grid
-    grid-template-columns: repeat(3, 33%)
+    display: flex
+    flex-direction: column
+    +media-min-md()
+      display: grid
+      grid-template-columns: repeat(3, 33%)
     &_one
     &_two
     &_third
