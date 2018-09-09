@@ -1,0 +1,17 @@
+[
+  {    
+    "skill": "Responsive Web Design",
+    "description": "I design websites that work across all devices. They’re fluid and adaptive, just like my process",
+    "rating": 9
+  },
+  {
+    "skill": "Front-end Development",
+    "description": "HTML, CSS, & JavaScript - there’s web standards and then there’s browsers, and I know both.",
+    "rating": 8
+  },
+  {
+    "skill": "And a whole lot more…",
+    "description": "Be it Angular, Vue, I can help you and it sure will be a pleasure",
+    "rating": 7
+  }
+]

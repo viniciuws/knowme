@@ -9,7 +9,10 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "moment": "^2.22.2",
     "normalize": "^0.3.1",
+    "normalize.css": "^8.0.0",
     "register-service-worker": "^1.0.0",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
@@ -75,5 +78,20 @@
       "**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)"
     ],
     "testURL": "http://localhost/"
-  }
+  },
+  "description": "## Project setup ``` npm install ```",
+  "main": "babel.config.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viniciuws/knowme.git"
+  },
+  "author": "Vinícius",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viniciuws/knowme/issues"
+  },
+  "homepage": "https://github.com/viniciuws/knowme#readme"
 }
