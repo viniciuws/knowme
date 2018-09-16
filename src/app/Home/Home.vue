@@ -1,12 +1,18 @@
 <template>
   <div class="home">
     <div class="home__header">
-      <div class="home__header_triangle"></div>
+      <div class="home__cubism">
+        <div class="home__cubism_a"></div>
+        <div class="home__cubism_b"></div>
+        <div class="home__cubism_c"></div>
+        <div class="home__cubism_d"></div>
+        <div class="home__cubism_e"></div>
+      </div>
       <img src="https://cdn.dribbble.com/users/31752/screenshots/1528969/globe-dribbble-400x300_1_.gif" alt="World" height="180" width="250">
     </div>
     <div class="home__title">SKILLS</div>
     <div class="home__skills">
-      <Skill v-for="skill in skills" class="home-skills" :title="skill.skill" :description="skill.description" :rating="skill.rating"/>
+      <Skill v-for="skill in skills" :key="skill.skill" class="home-skills" :title="skill.skill" :description="skill.description" :more="skill.more" :rating="skill.rating"/>
     </div>
   </div>
 </template>
@@ -49,12 +55,28 @@ export default {
     display: flex
     justify-content: space-between
     width: 100%
-    &_triangle
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 100px 400px 0 0;
-      border-color: $secondary-color transparent transparent transparent;
+  &__cubism
+    display: flex
+    flex-direction: row
+    width: 0; 
+    height: 0; 
+    z-index: -1000
+    &_a
+      border-right: 100px solid $secondary-light-color; 
+      border-bottom: 50px solid transparent;
+    &_b
+      border-right: 150px solid $secondary-color; 
+      border-bottom: 100px solid transparent;
+    &_c
+      border-left: 100px solid transparent; 
+      border-right: 100px solid transparent; 
+      border-top: 150px solid $secondary-dark-color; 
+    &_d
+      border-left: 150px solid $secondary-color; 
+      border-bottom: 100px solid transparent; 
+    &_e
+      border-left: 100px solid $secondary-light-color; 
+      border-bottom: 50px solid transparent; 
   &__title
     display: flex
     justify-content: center
@@ -69,7 +91,4 @@ export default {
     +media-min-md()
       display: grid
       grid-template-columns: repeat(3, 33%)
-    &_one
-    &_two
-    &_third
 </style>
