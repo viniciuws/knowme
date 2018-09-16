@@ -2,16 +2,19 @@
   {    
     "skill": "Responsive Web Design",
     "description": "I design websites that work across all devices. They’re fluid and adaptive, just like my process",
+    "more": "Responsive Web Design is about using HTML and CSS to automatically resize, hide, shrink, or enlarge, a website, to make it look good on all devices (desktops, tablets, and phones).",
     "rating": 9
   },
   {
     "skill": "Front-end Development",
     "description": "HTML, CSS, & JavaScript - there’s web standards and then there’s browsers, and I know both.",
+    "more": "Front-end web development is the practice of converting data to graphical interface for user to view and interact with data through digital interaction using HTML, CSS and JavaScript.",
     "rating": 8
   },
   {
     "skill": "And a whole lot more…",
     "description": "Be it Angular, Vue, I can help you and it sure will be a pleasure",
+    "more": "From scoping requirements to planning content — through design and development — collaboration between myself and clients is paramount.",
     "rating": 7
   }
 ]

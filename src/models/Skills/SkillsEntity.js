@@ -1,7 +1,8 @@
 class SkillsEntity {
-  constructor(id, desc, rating) {
+  constructor(id, description, more, rating) {
     this.id = id;
-    this.desc = desc;
+    this.description = description;
+    this.more = more;
     this.rating = rating;
   }
 }
