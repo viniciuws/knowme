@@ -1,15 +1,18 @@
-class PersonEntity {
-  constructor(name, birth, summary, profession, genre, fullSummary, email, experience, twitter, github, linkedin) {
-    this.name = name;
-    this.birth = birth;
-    this.summary = summary;
-    this.profession = profession;
-    this.genre = genre;
-    this.fullSummary = fullSummary;
-    this.email = email;
-    this.experience = experience;
-    this.twitter = twitter;
-    this.github = github;
-    this.linkedin = linkedin;
+import SkillEntity from '../Skills/SkillsEntity';
+
+export default class PersonEntity {
+  constructor(obj) {
+    this.name = obj.name;
+    this.birth = obj.birth;
+    this.summary = obj.summary;
+    this.profession = obj.profession;
+    this.genre = obj.genre;
+    this.fullSummary = obj.fullSummary;
+    this.email = obj.email;
+    this.experience = obj.experience;
+    this.twitter = obj.twitter;
+    this.github = obj.github;
+    this.linkedin = obj.linkedin;
+    this.skills = obj.skills.map(skill => new SkillEntity(skill));
   }
 }

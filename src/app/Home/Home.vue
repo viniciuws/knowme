@@ -4,22 +4,22 @@
       <div class="home__cubism">
         <div class="home__cubism_a"></div>
         <div class="home__cubism_b"></div>
-        <div class="home__cubism_c"></div>
+        <div class="home__cubism_c_animate"></div>
         <div class="home__cubism_d"></div>
         <div class="home__cubism_e"></div>
       </div>
-      <img src="https://cdn.dribbble.com/users/31752/screenshots/1528969/globe-dribbble-400x300_1_.gif" alt="World" height="180" width="250">
+      <img class="home__world" src="https://cdn.dribbble.com/users/31752/screenshots/1528969/globe-dribbble-400x300_1_.gif" alt="World" height="180" width="250">
     </div>
     <div class="home__title">SKILLS</div>
     <div class="home__skills">
-      <Skill v-for="skill in skills" :key="skill.skill" class="home-skills" :title="skill.skill" :description="skill.description" :more="skill.more" :rating="skill.rating"/>
+      <Skill v-for="skill in skills" :key="skill.id" class="home-skills" :title="skill.name" :description="skill.description" :more="skill.more" :rating="skill.rating"/>
     </div>
   </div>
 </template>
 
 <script>
 import Skill from './Skill.vue';
-import SkillsService from '../../models/Skills/SkillsService';
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'Home',
@@ -31,14 +31,11 @@ export default {
   },
   data: function () {
     return {
-      skills: {},
     };
   },
 
-  created() {
-    SkillsService.find().then(({ data }) => {
-      this.skills = data;
-    });
+  computed: {
+    ...mapGetters(['skills']),
   },
 };
 </script>
@@ -55,10 +52,10 @@ export default {
     display: flex
     justify-content: space-between
     width: 100%
+    flex-shrink: 0
   &__cubism
     display: flex
     flex-direction: row
-    width: 0; 
     height: 0; 
     z-index: -1000
     &_a
@@ -71,12 +68,18 @@ export default {
       border-left: 100px solid transparent; 
       border-right: 100px solid transparent; 
       border-top: 150px solid $secondary-dark-color; 
+      &_animate
+        animation: cubism 5s ease infinite
+        position: relative
     &_d
       border-left: 150px solid $secondary-color; 
       border-bottom: 100px solid transparent; 
     &_e
       border-left: 100px solid $secondary-light-color; 
-      border-bottom: 50px solid transparent; 
+      border-bottom: 50px solid transparent;
+  &__world
+    animation: world 5s ease-in infinite alternate
+    position: relative 
   &__title
     display: flex
     justify-content: center
@@ -85,10 +88,33 @@ export default {
     color: $secondary-font-color
     font-size: 36px
     font-weight: bold
+    flex-shrink: 0
   &__skills
     display: flex
     flex-direction: column
     +media-min-md()
       display: grid
       grid-template-columns: repeat(3, 33%)
+
+@keyframes world
+  0%
+    right: 1%
+  50%
+    right: 10%
+  100%
+    right: 1%
+
+@keyframes cubism
+  0%
+    border-left: 100px solid transparent; 
+    border-right: 100px solid transparent; 
+    border-top: 150px solid $secondary-dark-color; 
+  50%
+    border-left: 100px solid transparent; 
+    border-right: 100px solid transparent; 
+    border-top: 170px solid $secondary-dark-color; 
+  100%
+    border-left: 100px solid transparent; 
+    border-right: 100px solid transparent; 
+    border-top: 150px solid $secondary-dark-color; 
 </style>

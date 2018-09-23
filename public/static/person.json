@@ -1,7 +1,7 @@
 {
     "name": "Vinícius Marquesini Terzi",
     "birth": "1992-03-22",
-    "summary": "Resumo pessoal em 140 caracteres para que as pessoas que acessarem o site possam ter um bom conhecimento do profissional",
+    "summary": "I am a Front-end Developer, graduate of Computer Science. I have 2 years experience providing front-end development, producing high quality responsive websites and exceptional user experience.",
     "profession": "Front end Developer",
     "genre": "Masculino",
     "email": "vinicius.terzi@db1.com.br",
@@ -9,5 +9,41 @@
     "experience": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
     "twitter": "https://twitter.com/viniciuws",
     "github": "https://github.com/viniciuws",
-    "linkedin": "https://www.linkedin.com/in/viniciusmarquesini/"
+    "linkedin": "https://www.linkedin.com/in/viniciusmarquesini/",
+    "skills": [{
+                "id": 1,
+                "name": "Responsive Web Design",
+                "description": "I design websites that work across all devices. They’re fluid and adaptive, just like my process",
+                "more": "Responsive Web Design is about using HTML and CSS to automatically resize, hide, shrink, or enlarge, a website, to make it look good on all devices (desktops, tablets, and phones).",
+                "rating": 5
+            },
+            {
+                "id": 2,
+                "name": "Front-end Development",
+                "description": "HTML, CSS, & JavaScript - there’s web standards and then there’s browsers, and I know both.",
+                "more": "Front-end web development is the practice of converting data to graphical interface for user to view and interact with data through digital interaction using HTML, CSS and JavaScript.",
+                "rating": 4
+            },
+            {
+                "id": 3,
+                "name": "Frameworks",
+                "description": "Be it Angular, Vue, I can help you and it sure will be a pleasure",
+                "more": "From scoping requirements to planning content — through design and development — collaboration between myself and clients is paramount.",
+                "rating": 3
+            },
+            {
+                 "id": 4,
+                "name": "Volunteering",
+                "description": "If you have any ideas that could make a positive impact on the planet, talk to me",
+                "more": "I am always open to conversations and exchanges of knowledge about what we can do to contribute and work for nature.",
+                "rating": 5
+            },
+            {
+                "id": 5,
+                "name": "And a whole lot more…",
+                "description": "Dynamism",
+                "more": "Adapting to change all the time leaves the path always open for new challenges.",
+                "rating": 5
+            }
+        ]
 }

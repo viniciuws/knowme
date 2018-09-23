@@ -2,7 +2,9 @@
   <div class="app">
     <section class="app__page">
       <AppHeader/>
-      <router-view class="app__main"/>
+      <transition name="slide-fade" mode="out-in">
+        <router-view class="app__main"/>
+      </transition>
       <AppFooter/>
     </section>
     <section class="app__details">
@@ -17,9 +19,7 @@ import Home from './app/Home/Home.vue';
 import AppHeader from './app/Layout/AppHeader.vue';
 import Details from './app/Details/Details.vue';
 import AppFooter from './app/Layout/AppFooter.vue';
-import PersonService from './models/Person/PersonService';
-import PersonEntity from './models/Person/PersonEntity';
-import * as Actions from './store/Person/actions.js';
+import { mapActions } from 'vuex';
 
 export default {
   name: 'App',
@@ -31,20 +31,16 @@ export default {
   },
   data() {
     return {
-      person: new PersonEntity(),
     };
   },
   
   created() {
-    PersonService.find().then(({ data }) => {
-      Actions.setPerson('eae')
-      console.log(data);
-    });
+    this.setPerson();
   },
 
-  // computed: {
-  //   ...mapGetters(['person']),
-  // },
+  methods: {
+    ...mapActions(['setPerson'])
+  },
 };
 </script>
 
@@ -70,4 +66,13 @@ export default {
     box-shadow: -1px 0px 10px rgba(0, 0, 0, 0.15);
     +media-min-md()
       width: 30%
+
+.slide-fade-enter-active
+  transition: all .3s ease
+.slide-fade-leave-active
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0)
+.slide-fade-enter, .slide-fade-leave-to
+  transform: translateX(10px)
+  opacity: 0
+  
 </style>

@@ -23,9 +23,11 @@ export default {
   color: $primary-font-color
   border-radius: 5px
   box-shadow: -1px 1px 2px $primary-color;
+  transition: all 1s ease-in
   &:hover
     cursor: pointer
     background-color: $primary-color-button
     box-shadow: -3px 3px 0px $secondary-color;
     color: $secondary-font-color
+    transition: all 1s ease
 </style>

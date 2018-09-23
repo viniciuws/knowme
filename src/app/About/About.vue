@@ -16,22 +16,20 @@
 </template>
 
 <script>
-import PersonService from '../../models/Person/PersonService'
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'About',
 
   data: function () {
     return {
-      person: {},
     };
   },
 
-  created() {
-    PersonService.find().then(({ data }) => {
-      this.person = data;
-    });
+  computed: {
+    ...mapGetters(['person']),
   },
+
 };
 </script>
 
