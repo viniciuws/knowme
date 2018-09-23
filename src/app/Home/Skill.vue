@@ -1,5 +1,6 @@
 <template>
   <article class="skill">
+    <Rating :rating="rating" :id="id"/>
     <div class="skill__head">
       {{ title }}
     </div>
@@ -7,30 +8,33 @@
       {{ description }} <span class="skill__more" :class="[ isActive ? 'skill__more_active': 'skill__more_deactive']"> {{ more }}</span>
     </div>
     <div class="skill__action" v-on:click="isActive = !isActive">
-      <AppButton description="More..." />
+      <AppButton :description="!isActive ? 'More...' : 'Less'" />
     </div>
   </article>
 </template>
 
 <script>
 import AppButton from '../../components/AppButton.vue'
+import Rating from '../../components/Rating.vue'
 
 export default {
   name: 'Skill',
   data() {
     return {
-      isActive: false
+      isActive: false,
     };
   },
   props: {
+    id: Number,
     title: String,
     description: String,
     more: String,
     rating: Number
   },
   components: {
-    AppButton
-  }
+    AppButton,
+    Rating
+  },
 };
 </script>
 
@@ -41,7 +45,7 @@ export default {
   flex: shrink
   justify-content: flex-start
   flex-direction: column
-  padding: 30px
+  padding: 15px
   &__head
     color: $primary-font-color
     font-size: 20px
@@ -57,4 +61,5 @@ export default {
   &__action
     display: flex
     justify-content: flex-end
+    padding-top: 5px
 </style>

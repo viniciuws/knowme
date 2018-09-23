@@ -1,8 +1,9 @@
-class SkillsEntity {
-  constructor(id, description, more, rating) {
-    this.id = id;
-    this.description = description;
-    this.more = more;
-    this.rating = rating;
+export default class SkillsEntity {
+  constructor(obj) {
+    this.id = obj.id;
+    this.name = obj.name;
+    this.description = obj.description;
+    this.more = obj.more;
+    this.rating = obj.rating;
   }
 }

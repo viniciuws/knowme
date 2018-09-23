@@ -9,23 +9,21 @@
 
 <script>
 import UserAvatar from '../../components/UserAvatar.vue';
-import PersonService from '../../models/Person/PersonService';
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'Details',
   components: {
     UserAvatar,
   },
-  data: function () {
+  
+  data() {
     return {
-      person: {},
     };
   },
-
-  created() {
-    PersonService.find().then(({ data }) => {
-      this.person = data;
-    });
+  
+  computed: {
+    ...mapGetters(['person']),
   },
 
 };
