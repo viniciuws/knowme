@@ -32,7 +32,7 @@ export default {
   &__swap
     margin-left: 20px
     cursor: pointer
+    transition: all 0.4s ease
     &:hover
-      color: $primary-color
-      font-size: 18px
+      font-size: 24px
 </style>
