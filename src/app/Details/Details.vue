@@ -8,24 +8,22 @@
 </template>
 
 <script>
-import UserAvatar from '../../components/UserAvatar.vue';
-import { mapGetters } from 'vuex';
+import UserAvatar from "../../components/UserAvatar.vue";
+import { mapGetters } from "vuex";
 
 export default {
-  name: 'Details',
+  name: "Details",
   components: {
-    UserAvatar,
-  },
-  
-  data() {
-    return {
-    };
-  },
-  
-  computed: {
-    ...mapGetters(['person']),
+    UserAvatar
   },
 
+  data() {
+    return {};
+  },
+
+  computed: {
+    ...mapGetters(["person"])
+  }
 };
 </script>
 
@@ -40,19 +38,21 @@ export default {
     margin-top: 20px
   &__name
     padding: 30px
-    font-size: 22px
+    font-size: 26px
     text-decoration: none
     color: $primary-color-button
     &:hover
       cursor: pointer
       font-weight: bold
   &__profession
+    padding: 0 30px 0 30px
+    text-align: center
     font-size: 30px
     font-weight: bold
     color: $secondary-font-color
   &__summary
     padding: 30px
-    font-size: 18px
+    font-size: 22px
     text-align: center
     color: $tertiary-font-color
 </style>
