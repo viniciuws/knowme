@@ -8,7 +8,7 @@
         <div class="home__cubism_d"></div>
         <div class="home__cubism_e"></div>
       </div>
-      <img class="home__world" src="https://cdn.dribbble.com/users/31752/screenshots/1528969/globe-dribbble-400x300_1_.gif" alt="World" height="180" width="250">
+      <img class="home__world" src="../../assets/images/world.gif" alt="World" height="180" width="250">
     </div>
     <div class="home__title">SKILLS</div>
     <div class="home__skills">

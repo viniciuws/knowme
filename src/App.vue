@@ -5,7 +5,7 @@
       <transition name="slide-fade" mode="out-in">
         <router-view class="app__main"/>
       </transition>
-      <AppFooter/>
+      <AppFooter v-on:swap="swap"/>
     </section>
     <section class="app__details">
       <Details/>
@@ -31,14 +31,21 @@ export default {
   },
   data() {
     return {
+      change: false,
+      id: 0
     };
   },
   
   created() {
-    this.setPerson();
+    this.setPerson(1);
   },
 
   methods: {
+    swap: function () {
+      this.id = this.change === false ? 0 : 1
+      this.change = !this.change;
+      this.setPerson(this.id);
+    },
     ...mapActions(['setPerson'])
   },
 };

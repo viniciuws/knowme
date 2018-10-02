@@ -2,6 +2,8 @@ import SkillEntity from '../Skills/SkillsEntity';
 
 export default class PersonEntity {
   constructor(obj) {
+    this.id = obj.id;
+    this.avatar = obj.avatar;
     this.name = obj.name;
     this.birth = obj.birth;
     this.summary = obj.summary;

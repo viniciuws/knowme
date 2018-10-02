@@ -2,7 +2,7 @@
   <div class="header">
     <router-link to="/" class="header__menu">HOME</router-link>
     <router-link to="/about" class="header__menu">ABOUT</router-link>
-    <router-link to="/portfolio" class="header__menu">PORTFOLIO</router-link>
+    <!-- <router-link to="/portfolio" class="header__menu">PORTFOLIO</router-link> -->
     <router-link to="/contact" class="header__menu">CONTACT</router-link>
   </div>
 </template>
