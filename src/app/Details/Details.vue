@@ -34,6 +34,7 @@ export default {
   flex-direction: column
   align-items: center
   height: 100%
+  overflow-y: scroll
   &__avatar
     margin-top: 20px
   &__name

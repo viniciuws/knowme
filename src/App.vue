@@ -35,7 +35,7 @@ export default {
       id: 0
     };
   },
-  
+
   created() {
     this.setPerson(1);
   },
@@ -55,7 +55,7 @@ export default {
 @import 'styles/global.sass';
 .app
   display: flex
-  flex-direction: column
+  flex-direction: column-reverse
   +media-min-md()
     height: 100%
     flex-direction: row
@@ -81,5 +81,5 @@ export default {
 .slide-fade-enter, .slide-fade-leave-to
   transform: translateX(10px)
   opacity: 0
-  
+
 </style>
