@@ -54,32 +54,37 @@ export default {
     width: 100%
     flex-shrink: 0
   &__cubism
-    display: flex
-    flex-direction: row
-    height: 0; 
-    z-index: -1000
-    &_a
-      border-right: 100px solid $secondary-light-color; 
-      border-bottom: 50px solid transparent;
-    &_b
-      border-right: 150px solid $secondary-color; 
-      border-bottom: 100px solid transparent;
-    &_c
-      border-left: 100px solid transparent; 
-      border-right: 100px solid transparent; 
-      border-top: 150px solid $secondary-dark-color; 
-      &_animate
-        animation: cubism 5s ease infinite
-        position: relative
-    &_d
-      border-left: 150px solid $secondary-color; 
-      border-bottom: 100px solid transparent; 
-    &_e
-      border-left: 100px solid $secondary-light-color; 
-      border-bottom: 50px solid transparent;
+    display: none
+    +media-min-md()
+      display: flex
+      flex-direction: row
+      height: 0;
+      z-index: -1000
+      &_a
+        border-right: 100px solid $secondary-light-color;
+        border-bottom: 50px solid transparent;
+      &_b
+        border-right: 150px solid $secondary-color;
+        border-bottom: 100px solid transparent;
+      &_c
+        border-left: 100px solid transparent;
+        border-right: 100px solid transparent;
+        border-top: 150px solid $secondary-dark-color;
+        &_animate
+          animation: cubism 5s ease infinite
+          position: relative
+      &_d
+        border-left: 150px solid $secondary-color;
+        border-bottom: 100px solid transparent;
+      &_e
+        border-left: 100px solid $secondary-light-color;
+        border-bottom: 50px solid transparent;
   &__world
-    animation: world 5s ease-in infinite alternate
-    position: relative 
+    display: none
+    +media-min-md()
+      display: block
+      animation: world 5s ease-in infinite alternate
+      position: relative
   &__title
     display: flex
     justify-content: center
@@ -106,15 +111,15 @@ export default {
 
 @keyframes cubism
   0%
-    border-left: 100px solid transparent; 
-    border-right: 100px solid transparent; 
-    border-top: 150px solid $secondary-dark-color; 
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-top: 150px solid $secondary-dark-color;
   50%
-    border-left: 100px solid transparent; 
-    border-right: 100px solid transparent; 
-    border-top: 170px solid $secondary-dark-color; 
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-top: 170px solid $secondary-dark-color;
   100%
-    border-left: 100px solid transparent; 
-    border-right: 100px solid transparent; 
-    border-top: 150px solid $secondary-dark-color; 
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-top: 150px solid $secondary-dark-color;
 </style>
